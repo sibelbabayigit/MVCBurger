@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mctun\\OneDrive\\Desktop\\MvcBurger-master\\MvcBurger\\MvcBurger.csproj": {}
+    "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/MvcBurger.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mctun\\OneDrive\\Desktop\\MvcBurger-master\\MvcBurger\\MvcBurger.csproj": {
+    "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/MvcBurger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mctun\\OneDrive\\Desktop\\MvcBurger-master\\MvcBurger\\MvcBurger.csproj",
+        "projectUniqueName": "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/MvcBurger.csproj",
         "projectName": "MvcBurger",
-        "projectPath": "C:\\Users\\mctun\\OneDrive\\Desktop\\MvcBurger-master\\MvcBurger\\MvcBurger.csproj",
-        "packagesPath": "C:\\Users\\mctun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mctun\\OneDrive\\Desktop\\MvcBurger-master\\MvcBurger\\obj\\",
+        "projectPath": "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/MvcBurger.csproj",
+        "packagesPath": "/Users/sibelbd/.nuget/packages/",
+        "outputPath": "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mctun\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sibelbd/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -78,6 +81,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -86,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
