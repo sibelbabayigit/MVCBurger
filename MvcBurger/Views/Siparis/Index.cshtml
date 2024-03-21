@@ -1,0 +1,70 @@
+﻿@using MvcBurger.Entities
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-light">Siparişler</h2>
+<h3 class="text-light">@ViewBag.Fullname Hoşgeldiniz</h3>
+
+<p>
+    <a asp-action="Create" class="btn btn-warning">Yeni Siparis</a>
+</p>
+<table class="table " >
+    <thead>
+        <tr>
+            <th>
+                Menü Adı
+            </th>
+            <th>
+                Ekstra Malzemeler
+            </th>
+            <th>
+                Buyukluk
+            </th>
+            <th>
+                Adet
+            </th>
+            <th>
+                Toplam Fiyat
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Siparis kullaniciSiparis in ViewBag.KullaniciSiparis)
+        {
+            <tr>
+                <td>
+                    @foreach (var menu in kullaniciSiparis.Menuler)
+                    {
+                        @menu.Ad
+                        <br />
+                    }
+                </td>
+                <td>
+                    @foreach (var ekstraMalzeme in kullaniciSiparis.EkstraMalzemeler)
+                    {
+                        @ekstraMalzeme.Adi
+                        <br />
+                    }
+                </td>
+                <td>
+                    @kullaniciSiparis.Buyukluk
+                </td>
+                <td>
+                    @kullaniciSiparis.SiparisSayisi
+                </td>
+                <td>
+                    @kullaniciSiparis.ToplamFiyat
+                </td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@kullaniciSiparis.Id" class="btn btn-success">Güncelle</a> 
+                    <a asp-action="Details" asp-route-id="@kullaniciSiparis.Id" class="btn btn-warning">Sipariş Detayı </a> 
+                    <a asp-action="Delete" asp-route-id="@kullaniciSiparis.Id" class="btn btn-danger">Sil</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
