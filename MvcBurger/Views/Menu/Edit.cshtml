@@ -4,12 +4,10 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Menu</h4>
 <hr />
-<div class="row">
-    <div class="col-md-6">
+<div class="row justify-content-center align-items-center text-light">
+    <div class="col-md-6 custom-form">
+        <h4 class="text-center">Menu</h4>
         <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -26,16 +24,16 @@
                 <label asp-for="ResimAdi"></label>
                 <input asp-for="ResimAdi" type="file" />
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Edit" class="btn btn-success" />
+                <a class="btn btn-warning " asp-action="Index">Tüm Siparişler</a>
             </div>
         </form>
     </div>
 </div>
 <br />
-<div>
-    <a class="btn btn-outline-warning btn-sm" asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

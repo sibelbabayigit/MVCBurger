@@ -11730,24 +11730,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/sibelbd/.nuget/packages/": {}
+    "C:\\Users\\tuğba\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/MvcBurger.csproj",
+      "projectUniqueName": "C:\\Users\\tuğba\\Desktop\\Mvc2\\MvcBurger\\MvcBurger.csproj",
       "projectName": "MvcBurger",
-      "projectPath": "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/MvcBurger.csproj",
-      "packagesPath": "/Users/sibelbd/.nuget/packages/",
-      "outputPath": "/Users/sibelbd/Desktop/workspace/MVCBurger/MvcBurger/obj/",
+      "projectPath": "C:\\Users\\tuğba\\Desktop\\Mvc2\\MvcBurger\\MvcBurger.csproj",
+      "packagesPath": "C:\\Users\\tuğba\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tuğba\\Desktop\\Mvc2\\MvcBurger\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sibelbd/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\tuğba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11809,20 +11811,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-arm64",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -11831,7 +11819,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
