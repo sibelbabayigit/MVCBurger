@@ -3,13 +3,10 @@
 @{
     ViewData["Title"] = "Create";
 }
-
-<h1>Create</h1>
-
-<h4>Menu</h4>
 <hr />
-<div class="row">
-    <div class="col-md-6">
+<div class="row justify-content-center align-items-center text-light">
+    <div class="col-md-6 custom-form">
+        <h4 class="text-center">Menu</h4>
         <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -35,7 +32,7 @@
 </div>
 <br />
 <div>
-    <a class="btn btn-outline-warning btn-sm" asp-action="Index">Back to List</a>
+    <a class="btn btn-warning " asp-action="Index">Tüm Siparişler</a>
 </div>
 
 @section Scripts {
