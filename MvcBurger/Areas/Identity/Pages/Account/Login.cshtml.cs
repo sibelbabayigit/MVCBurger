@@ -66,7 +66,8 @@ namespace MvcBurger.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [EmailAddress]
+            //[EmailAddress]
+            [EmailAddress(ErrorMessage = "Geçersiz e-posta formatı.")]
             public string Email { get; set; }
 
             /// <summary>
@@ -74,7 +75,8 @@ namespace MvcBurger.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [DataType(DataType.Password)]
+            //[DataType(DataType.Password)]
+            //[RegularExpression(@"^[A-Za-z0-9!@#$%^&*()_+=\[{\]};:<>|./?,-]*$", ErrorMessage = "Şifrede geçersiz karakterler var.")]
             public string Password { get; set; }
 
             /// <summary>
@@ -115,7 +117,7 @@ namespace MvcBurger.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
+                    _logger.LogInformation("Kullanıcı oturum açtı.");
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -124,12 +126,12 @@ namespace MvcBurger.Areas.Identity.Pages.Account
                 }
                 if (result.IsLockedOut)
                 {
-                    _logger.LogWarning("User account locked out.");
+                    _logger.LogWarning("Kullanıcı hesabı kilitlendi.");
                     return RedirectToPage("./Lockout");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Geçersiz giriş denemesi!");
                     return Page();
                 }
             }

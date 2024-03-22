@@ -74,14 +74,18 @@ namespace MvcBurger.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            [Required(ErrorMessage = "Bu alan zorunludur.")]
             public string Ad { get; set; }
+            [Required(ErrorMessage = "Bu alan zorunludur.")]
             public string Soyad { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [EmailAddress]
+            //[Required]
+            //[EmailAddress]
+            [EmailAddress(ErrorMessage = "Geçersiz e-posta formatı.")]
+
             [Display(Name = "Email")]
             public string Email { get; set; }
 
@@ -90,7 +94,7 @@ namespace MvcBurger.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "Şifre en az {2} ve en fazla {1} karakter uzunluğunda olmalıdır.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -101,7 +105,7 @@ namespace MvcBurger.Areas.Identity.Pages.Account
             /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "Şifre ve onay şifresi eşleşmiyor.")]
             public string ConfirmPassword { get; set; }
         }
 
@@ -129,7 +133,7 @@ namespace MvcBurger.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
+                    _logger.LogInformation("Kullanıcı şifreyle yeni bir hesap oluşturdu.");
                     await _userManager.AddToRoleAsync(user, "Musteri");
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

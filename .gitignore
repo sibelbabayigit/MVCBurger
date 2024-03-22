@@ -1,3 +1,5 @@
 MvcBurger/bin/
 MvcBurger/obj/
 .DS_Store
+MvcBurger/appsettings.json
+MvcBurger/bin/Debug/net7.0/MvcBurger.dll
